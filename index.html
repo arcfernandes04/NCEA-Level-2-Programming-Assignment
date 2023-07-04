@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <title>Math Test</title>
+</head>
+<body>
+    <section id="opening-screen"> 
+        <h1>Welcome to your year six maths test!</h1>
+        <br>
+        <p>This test combines three topics from this year, numbers, shapes and place values. There will be 15 question, if you get all 15 right your teacher will give you any sticker you want. Type your answers into the boxes and once you are done, press the 'submit' button.</p>
+        <br>
+        <p>Make sure to wait for your teacher to say you can press the button!</p>
+        <button id="start-button" onclick="nextSection('opening-screen','section1');">Start</button>
+    </section> <!-- /opening-screen -->
+
+    <section id="section1" class="section">
+        <h1>Section 1 - Numbers</h1>
+        <p>What is 5 + 10?</p>
+        <ol>
+            <li>20</li>
+            <li>15</li>
+            <li>25</li>
+            <li>10</li>
+        </ol>
+        <input type="text" id="answer1" class="input" placeholder="Answer here">
+        <p id="answer1correction" class="feedback"></p>
+        
+        <p>What is 5.4 + 5.7 + 6.0?</p>
+        <ol>
+            <li>17.4</li>
+            <li>20.3</li>
+            <li>16.8</li>
+            <li>17.1</li>
+        </ol>
+        <input type="text" id="answer2" class="input" placeholder="Answer here">
+        <p id="answer2correction" class="feedback"></p>
+        
+        <p>What is 432 &divide; 2?</p>
+        <ol>
+            <li>215</li>
+            <li>210</li>
+            <li>216</li>
+            <li>316</li>
+        </ol>
+        <input type="text" id="answer3" class="input" placeholder="Answer here">
+        <p id="answer3correction" class="feedback"></p>
+        
+        <p>What is 4 x 15?</p>
+        <ol>
+            <li>65</li>
+            <li>45</li>
+            <li>60</li>
+            <li>30</li>
+        </ol>
+        <input type="text" id="answer4" class="input" placeholder="Answer here">
+        <p id="answer4correction" class="feedback"></p>
+        
+        <p>8 x ? = 64</p>
+        <ol>
+            <li>4</li>
+            <li>8</li>
+            <li>1</li>
+            <li>6</li>
+        </ol>
+        <input type="text" id="answer5" class="input" placeholder="Answer here">
+        <p id="answer5correction" class="feedback"></p>
+
+        <p id="section-results1" style="display: none;"> </p>
+        <br>
+        <button id="done-button1" class="done-button" onclick="inputCheck(1, 1);">Done</button>
+        <button id="next-button1" class="next-button" onclick="nextSection('section1','section2');" style="display: none;">Next</button>
+    </section> <!-- /section1 -->
+
+    <section id="section2" class="section">
+        <h1>Section 2 - Shapes</h1>
+        <p>How many sides does a cube have?</p>
+        <input type="text" id="answer6" class="input" placeholder="Answer here">
+        <p id="answer6correction" class="feedback"></p>
+        
+        <p>What is a 3D circle called?</p>
+        <input type="text" id="answer7" class="input" placeholder="Answer here">
+        <p id="answer7correction" class="feedback"></p>
+        
+        <p>All sides of a square are...</p>
+        <input type="text" id="answer8" class="input" placeholder="Answer here">
+        <p id="answer8correction" class="feedback"></p>
+        
+        <p>Is this symmetrical?</p>
+        <img src="images/asymmetrical-image.jpg" alt="Tree image">
+        <br>
+        <input type="text" id="answer9" class="input" placeholder="Answer here">
+        <p id="answer9correction" class="feedback"></p>
+        
+        <p>How many sides does a circle have?</p>
+        <input type="text" id="answer10" class="input" placeholder="Answer here">
+        <p id="answer10correction" class="feedback"></p>
+        
+        <p id="section-results2" style="display: none;"> </p>
+        <br>
+        <button id="done-button2" class="done-button" onclick="inputCheck(2, 6);">Done</button>
+        <button id="next-button2" class="next-button" onclick="nextSection('section2','section3');" style="display: none;">Next</button>
+    </section> <!-- /section2 -->
+    
+    <section id="section3" class="section">
+        <h1>Section 3 - Place value</h1>
+        <p>What is the number in the tens position of 145?</p>
+        <input type="text" id="answer11" class="input" placeholder="Answer here">
+        <p id="answer11correction" class="feedback"></p>
+        
+        <p>What is the number in the hundreds position of 493?</p>
+        <input type="text" id="answer12" class="input" placeholder="Answer here">
+        <p id="answer12correction" class="feedback"></p>
+
+        <p>What is the number in the ones position of 42?</p>
+        <input type="text" id="answer13" class="input" placeholder="Answer here">
+        <p id="answer13correction" class="feedback"></p>
+
+        <p>What is the number in the hundreds position of 1000?</p>
+        <input type="text" id="answer14" class="input" placeholder="Answer here">
+        <p id="answer14correction" class="feedback"></p>
+
+        <p>What is the number in the thousands position of 7503?</p>
+        <input type="text" id="answer15" class="input" placeholder="Answer here">
+        <p id="answer15correction" class="feedback"></p>
+        
+        <p id="section-results3" style="display: none;"> </p>
+        <br>
+        <button id="done-button3" class="done-button" onclick="inputCheck(3, 11);">Done</button>
+        <button id="next-button3" class="next-button" onclick="nextSection('section3','completed-screen'); shareResults();" style="display: none;">Next</button>
+    </section> <!-- /section3 -->
+
+    <section id="completed-screen">
+        <img src="images/confetti.gif" alt="" id="confetti-gif">
+        <h1>Well done!</h1>
+        <br>
+        <p>You finished the test!</p>
+        <p id="test-results"></p>
+        <br>
+        <p>Put your hand up so that your teacher can come and see your results. They will give you a sticker and you can have the rest of the lesson as free time!!</p>
+
+        <img src="images/dancing-parrot.gif" alt="disco parrot">
+    </section> <!-- /completed-screen-->
+
+    <script src="script.js"></script>
+</body>
+</html>

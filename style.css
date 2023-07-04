@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    margin: 10px;
+}
+
+#section1, #section2, #section3, #completed-screen {
+    display: none;
+}
+
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    padding: 10px;
+    background-color: #1E5162;
+    color: #ffffff;
+    border: none;
+    transition: .2s;
+    outline: none;
+
+}
+
+#opening-screen, #completed-screen {
+    background-color: #ADD8E6;
+    height: calc(100vh - 20px);
+}
+
+#opening-screen h1, #completed-screen h1 {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+#opening-screen, #completed-screen p {
+    padding: 0 20px;
+}
+
+#start-button {
+    width: 180px;
+    height: 70px;
+    margin: auto;
+    margin-top: 20vh;
+    display: block;
+}
+
+.next-button, .done-button {
+    margin: auto;
+    margin-left: 20px;
+}
+
+#start-button:hover, .next-button:hover, .done-button:hover {
+    background-color: #296E85;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#start-button:active, .next-button:active, .done-button:active {
+    outline: none;
+    background-color: #1E5162;
+}
+
+.section {
+    background-color: #ADD8E6;
+    padding: 20px;
+    min-height: calc(100vh - 20px);
+    box-sizing: border-box;
+}
+
+.section h1 {
+    font-size: 3em;
+    font-family: 'Roboto Slab', serif;
+}
+
+.section p {
+    padding: 20px 0px 0px 20px;
+}
+
+.section ol {
+    list-style-type: lower-alpha;
+    padding:  10px 0px 10px 60px;
+}
+
+.input {
+    margin-left: 20px;
+    padding-left: 5px;
+    height: 2em;
+    font-family: 'Lato', sans-serif;
+    border: 2px solid #888;
+    outline: none;
+}
+
+.input:focus {
+    border: 2px solid #555;
+}
+
+#completed-screen p {
+    text-align: center;
+}
+
+#completed-screen img {
+    width: calc((100vw - 20px)/4);
+    display: block;
+    margin: auto;
+}
+
+ #completed-screen #confetti-gif {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    position: absolute;
+    z-index: 999;
+}
+
+p.feedback { 
+    padding-top: 5px;
+    font-style: italic;
+    font-size: smaller;
+}
